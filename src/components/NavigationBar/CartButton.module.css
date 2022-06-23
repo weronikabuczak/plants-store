@@ -1,0 +1,44 @@
+button {
+    border: none;
+    width: 11rem;
+    padding: 5px 0;
+    font-style: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: rgba(28, 169, 143, 0.47);
+    border-radius: 20px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 2px 2px 2px #6acc90;
+}
+
+button:hover {
+    background-color: rgba(54, 183, 160, 0.47);
+    cursor: pointer;
+}
+
+.icon {
+    height: 2.5rem;
+}
+
+.quantity {
+    background-color: white;
+    padding: 0.5rem;
+    color: black;
+    border-radius: 30px;
+    width: 2rem;
+
+}
+
+.text {
+    font-size: 1.4rem;
+    border-right: 1px solid #013118;
+    padding: 9px 9px 9px 0;
+    font-family: inherit;
+}
+
+button:before {
+
+}
