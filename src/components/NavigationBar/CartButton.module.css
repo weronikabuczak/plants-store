@@ -1,4 +1,4 @@
-button {
+.cart-button {
     border: none;
     width: 11rem;
     padding: 5px 0;
@@ -11,10 +11,10 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 2px 2px 2px #6acc90;
+    box-shadow: 1px 1px 5px #3a3737;
 }
 
-button:hover {
+.cart-button:hover {
     background-color: rgba(54, 183, 160, 0.47);
     cursor: pointer;
 }
@@ -37,8 +37,4 @@ button:hover {
     border-right: 1px solid #013118;
     padding: 9px 9px 9px 0;
     font-family: inherit;
-}
-
-button:before {
-
 }

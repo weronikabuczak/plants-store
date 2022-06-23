@@ -1,0 +1,17 @@
+.default-button {
+    border: none;
+    padding: 5px 0;
+    width: 8rem;
+    font-style: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: rgb(153, 246, 197);
+    border-radius: 20px;
+    color: black;
+    box-shadow: 1px 1px 5px #7a7979;
+}
+
+.default-button:hover {
+    background-color: rgba(54, 183, 160, 0.47);
+    cursor: pointer;
+}

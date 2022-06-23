@@ -1,0 +1,17 @@
+.item {
+    padding: 0.2rem;
+    display: grid;
+
+}
+
+.item h2 {
+    margin-bottom: 0px;
+}
+
+.image {
+    height: 13rem;
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+
+

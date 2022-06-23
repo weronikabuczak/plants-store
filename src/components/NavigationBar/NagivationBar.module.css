@@ -1,18 +1,17 @@
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0 5rem;
 }
 
 h1 {
-    /*background-color: #bfffe6;*/
     border-radius: 20px;
     padding: 0.7rem;
     font-size: 2.5rem;
 }
 
 main {
-    /*background-color: #beffb9;*/
     background-image: linear-gradient(to bottom left, #f3faf3, #33ff82);
     height: 70vh;
     width: 80%;
@@ -20,27 +19,5 @@ main {
     border-radius: 4rem;
     position: relative;
     z-index: 0;
-}
-
-header {
-    padding: 2rem;
-    background-color: white;
-    width: 50%;
-    margin: 2rem auto;
-    border-radius: 3rem;
-    box-shadow: 5px 5px 20px 2px rgb(234, 231, 231);
-    text-align: justify;
-}
-
-header h2 {
-    text-align: center;
-}
-
-header img {
-    height: 30vh;
-    z-index: 1;
-    width: 100%;
-    object-fit: cover;
-    opacity: 80%;
 }
 
