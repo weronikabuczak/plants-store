@@ -1,0 +1,14 @@
+.amount-button {
+    width: 11rem;
+    margin-bottom: 0.5rem;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    padding-left: 5rem;
+}
+
+.form button {
+    margin-right: 20px;
+}

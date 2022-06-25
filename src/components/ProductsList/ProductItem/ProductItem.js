@@ -1,7 +1,7 @@
 import classes from './ProductItem.module.css';
 import CustomCard from "../../UI/CustomCard";
 import firstPlant from "../../../assets/plant1.png"
-import AddToCart from "./AddToCart";
+import AddToCartForm from "./AddToCartForm";
 
 const ProductItem = () => {
     return (
@@ -18,7 +18,8 @@ const ProductItem = () => {
                     non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                 </p>
                 <img className={classes.image} src={firstPlant}/>
-                <AddToCart/>
+                <AddToCartForm/>
+                {/*    todo add plants list*/}
             </section>
         </CustomCard>
     )
