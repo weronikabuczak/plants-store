@@ -15,3 +15,8 @@
     background-color: rgba(54, 183, 160, 0.47);
     cursor: pointer;
 }
+
+.default-button:disabled {
+    background-color: #7a7979;
+    cursor: not-allowed;
+}

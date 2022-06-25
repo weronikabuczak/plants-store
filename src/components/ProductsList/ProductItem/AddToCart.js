@@ -1,9 +1,13 @@
 import DefaultButton from "../../UI/DefaultButton";
+import Counter from "./Counter";
+import {Fragment} from "react";
 
 const AddToCart = () => {
     return (
-        <DefaultButton>Add to cart</DefaultButton>
-        // <Counter/>
+        <Fragment>
+            <DefaultButton>Add to cart</DefaultButton>
+            <Counter/>
+        </Fragment>
     )
 }
 
