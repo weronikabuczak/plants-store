@@ -4,8 +4,13 @@
 
 .products {
     width: 80%;
-    margin: 10rem auto;
+    margin: 7rem auto;
 
+}
+
+.products h1 {
+    font-size: 2rem;
+    padding-left: 3rem;
 }
 
 

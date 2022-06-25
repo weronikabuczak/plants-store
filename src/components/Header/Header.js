@@ -2,7 +2,6 @@ import mainImage from "../../assets/main-image.jpg";
 import WaveContainer from "./WaveContainer";
 import React from 'react';
 import classes from './Header.module.css'
-import CustomCard from "../UI/CustomCard";
 
 const Header = () => {
     return (

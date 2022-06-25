@@ -6,7 +6,7 @@ import classes from './NagivationBar.module.css'
 const NavigationBar = () => {
     return (
         <Fragment>
-            <main>
+            <main className={classes.main}>
                 <nav>
                     <h1>House Plants Store</h1>
                     <CartButton/>

@@ -4,7 +4,7 @@ import ProductItem from "./ProductItem/ProductItem";
 const ProductsList = () => {
     return (
         <section className={classes.products}>
-            <h1>Available plants</h1>
+            <h1>Our plants</h1>
             <ul className={classes.list}>
                 <ProductItem/>
             </ul>
