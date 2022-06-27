@@ -6,6 +6,7 @@
     border-radius: 3rem;
     box-shadow: 5px 5px 20px 2px rgb(234, 231, 231);
     text-align: justify;
+    animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .header h2 {
@@ -18,5 +19,14 @@
     width: 100%;
     object-fit: cover;
     border-radius: 20px;
+}
+
+@keyframes slide-bottom {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 

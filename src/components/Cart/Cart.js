@@ -5,7 +5,7 @@ import {useContext} from "react";
 import CartContext from "../../store/cart-context";
 import CartItem from "./CartItem";
 
-const Cart = () => {
+const Cart = (props) => {
     const cartContext = useContext(CartContext);
 
     const removeHandler = (id) => {};
@@ -17,7 +17,7 @@ const Cart = () => {
         <ul>
             {cartContext.products.map((product) => (
                 <CartItem
-                    product = {product}
+                    product={product}
                     key={product.id}
                     onRemove={removeHandler}
                     onAdd={addHandler}
@@ -28,13 +28,13 @@ const Cart = () => {
 
 
     return (
-        <CustomModal>
+        <CustomModal onClose={props.onClose}>
             {cartItems}
             <div className={classes.summary}>
                 <p>Total amount: 232$</p>
             </div>
             <div className={classes.actions}>
-                <DefaultButton>Close</DefaultButton>
+                <DefaultButton onClick={props.onClose}>Close</DefaultButton>
                 <DefaultButton>Order</DefaultButton>
             </div>
         </CustomModal>

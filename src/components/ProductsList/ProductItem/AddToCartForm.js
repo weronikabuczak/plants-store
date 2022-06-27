@@ -29,7 +29,7 @@ const AddToCartForm = (props) => {
             {!amountIsValid && <p>Entered amount is not valid.</p>}
             <DefaultInput
                 ref={amountRef}
-                label='Current amount'
+                label='Choose amount'
                 className={classes['amount-input']}
                 input={{
                     id: props.id,
