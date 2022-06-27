@@ -3,7 +3,7 @@ import icon from '../../assets/cart-icon.png'
 import CartContext from "../../store/cart-context";
 import {useContext} from "react";
 
-const CartButton = () => {
+const CartButton = (props) => {
     const cartContext = useContext(CartContext);
 
     const numberOfProducts = cartContext.products.reduce((currentNumber, product) => {
@@ -11,7 +11,7 @@ const CartButton = () => {
     }, 0);
 
     return (
-        <button className={classes['cart-button']}>
+        <button className={classes['cart-button']} onClick={props.onClick}>
               <span>
                 <img className={classes.icon} src={icon}/>
             </span>

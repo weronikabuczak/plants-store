@@ -2,8 +2,12 @@
     position: fixed;
     top: 20vh;
     width: 70%;
+    left: 15%;
     background-color: white;
-    padding: 1rem;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 3px 3px 4px 1px #d5d3d3;
+    text-align: center;
 }
 
 .backdrop {
