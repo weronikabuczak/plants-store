@@ -1,15 +1,15 @@
 import NavigationBar from "./components/NavigationBar/NavigationBar";
-import {Fragment} from 'react';
 import ProductsList from "./components/ProductsList/ProductsList";
 import Footer from "./components/Footer/Footer";
+import CartProvider from "./store/CartProvider";
 
 function App() {
     return (
-        <Fragment>
+        <CartProvider>
             <NavigationBar/>
             <ProductsList/>
             <Footer/>
-        </Fragment>
+        </CartProvider>
 
     );
 }
