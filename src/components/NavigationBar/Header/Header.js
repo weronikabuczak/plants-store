@@ -1,4 +1,4 @@
-import mainImage from "../../assets/main-image.jpg";
+import mainImage from "../../../assets/main-image.jpg";
 import WaveContainer from "./WaveContainer";
 import React from 'react';
 import classes from './Header.module.css'

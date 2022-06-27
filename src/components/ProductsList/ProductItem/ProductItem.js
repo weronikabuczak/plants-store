@@ -20,15 +20,15 @@ const ProductItem = ({plant}) => {
 
     return (
         <CustomCard>
-            <section className={classes.item}>
+            <li className={classes.item}>
                 <header>
                     <h2>{plant.name}</h2>
-                    <p className={classes.price}>{plant.price}</p>
+                    <p className={classes.price}>{plant.price}€</p>
                 </header>
                 <p className={classes.desc}>{plant.desc}</p>
                 <img className={classes.image} src={defaultPlant}/>
-                <AddToCartForm onAddToCart={addToCartHandler}/>
-            </section>
+                <AddToCartForm id={plant.id} onAddToCart={addToCartHandler}/>
+            </li>
         </CustomCard>
     )
 }
