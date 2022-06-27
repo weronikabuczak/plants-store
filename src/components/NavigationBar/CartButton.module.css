@@ -12,6 +12,8 @@
     align-items: center;
     justify-content: space-evenly;
     box-shadow: 1px 1px 5px #3a3737;
+    /*position: fixed;*/
+    /*right: 10rem;*/
 }
 
 .cart-button:hover {

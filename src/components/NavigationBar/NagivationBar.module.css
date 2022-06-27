@@ -2,21 +2,27 @@
     background-image: linear-gradient(to bottom left, #f3faf3, #76f6a7);
     height: 70vh;
     width: 90%;
+    padding-top: 8rem;
     margin: 1rem auto;
     border-radius: 4rem;
     position: relative;
+    top: -7rem;
     z-index: 0;
 }
 
 
-.main nav {
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 5rem;
+    margin: 1rem 9rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: transparent;
 }
 
-.main h1 {
+.nav h1 {
     font-size: 2.5rem;
     color: #145d36;
 }
