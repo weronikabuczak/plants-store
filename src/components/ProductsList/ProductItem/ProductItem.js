@@ -1,25 +1,19 @@
 import classes from './ProductItem.module.css';
 import CustomCard from "../../UI/CustomCard";
-import firstPlant from "../../../assets/plant1.png"
+import defaultPlant from "../../../assets/plant1.png"
 import AddToCartForm from "./AddToCartForm";
 
-const ProductItem = () => {
+const ProductItem = ({plant}) => {
     return (
         <CustomCard>
             <section className={classes.item}>
                 <header>
-                    <h2>Areca</h2>
+                    <h2>{plant.name}</h2>
+                    <p className={classes.price}>{plant.price}</p>
                 </header>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <img className={classes.image} src={firstPlant}/>
+                <p className={classes.desc}>{plant.desc}</p>
+                <img className={classes.image} src={defaultPlant}/>
                 <AddToCartForm/>
-                {/*    todo add plants list*/}
             </section>
         </CustomCard>
     )

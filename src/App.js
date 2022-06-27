@@ -8,6 +8,7 @@ function App() {
             <NavigationBar/>
             <ProductsList/>
         </Fragment>
+    //    todo footer
     );
 }
 
