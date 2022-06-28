@@ -1,0 +1,21 @@
+.cart-item {
+    list-style-type: none;
+    width: 70%;
+    background-color: #eee;
+    padding-top: 0.5rem;
+    border-radius: 20px;
+    margin: 1rem auto;
+}
+
+.cart-item button {
+    margin: 1rem 0.3rem;
+}
+
+.cart-item span {
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.actions button {
+    width: 3rem;
+}

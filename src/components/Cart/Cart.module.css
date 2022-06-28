@@ -1,6 +1,15 @@
-
-
 .actions button {
     margin-right: 10px;
 }
 
+.close-button {
+    background-color: darksalmon;
+}
+
+.order-button {
+    background-color: lightgreen;
+}
+
+.products-list {
+    padding: 0;
+}

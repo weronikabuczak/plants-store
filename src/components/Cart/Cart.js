@@ -12,9 +12,11 @@ const Cart = (props) => {
 
     const addHandler = (product) => {};
 
+    const cartHasProducts = cartContext.products.length > 0;
+
 
     const cartItems = (
-        <ul>
+        <ul className={classes['products-list']}>
             {cartContext.products.map((product) => (
                 <CartItem
                     product={product}
@@ -34,8 +36,8 @@ const Cart = (props) => {
                 <p>Total amount: 232$</p>
             </div>
             <div className={classes.actions}>
-                <DefaultButton onClick={props.onClose}>Close</DefaultButton>
-                <DefaultButton>Order</DefaultButton>
+                <DefaultButton onClick={props.onClose} className={classes['close-button']}>Close</DefaultButton>
+                {cartHasProducts && <DefaultButton className={classes['order-button']}>Order</DefaultButton>}
             </div>
         </CustomModal>
     )

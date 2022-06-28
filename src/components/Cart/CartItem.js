@@ -1,18 +1,19 @@
 import DefaultButton from "../UI/DefaultButton";
+import classes from './CartItem.module.css';
 
-const CartItem = (props) => {
-return (
-    <li>
-        <h3>{props.name}</h3>
-        <span>Price: {props.price}</span>
-        <span>Amount: {props.amount}</span>
-        <div>
-            <DefaultButton>Remove</DefaultButton>
-            <DefaultButton>Add</DefaultButton>
-        {/*    todo add remove and add*/}
-        </div>
-    </li>
-)
+const CartItem = ({product}) => {
+    return (
+        <li className={classes['cart-item']}>
+                <h2>{product.name}</h2>
+                <span>Price: {product.price}</span>
+                <span>Amount: {product.amount}</span>
+            <div className={classes.actions}>
+                <DefaultButton>-</DefaultButton>
+                <DefaultButton>+</DefaultButton>
+                {/*    todo add remove and add*/}
+            </div>
+        </li>
+    )
 }
 
 export default CartItem;
