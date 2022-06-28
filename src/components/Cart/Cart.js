@@ -10,7 +10,10 @@ const Cart = (props) => {
 
     const removeHandler = (id) => {};
 
-    const addHandler = (product) => {};
+    const addHandler = (product) => {
+        const cartProduct = {...product, amount: 1};
+        cartContext.addProduct(cartProduct);
+    };
 
     const cartHasProducts = cartContext.products.length > 0;
 
@@ -21,8 +24,8 @@ const Cart = (props) => {
                 <CartItem
                     product={product}
                     key={product.id}
-                    onRemove={removeHandler}
-                    onAdd={addHandler}
+                    onAdd={addHandler.bind(null, product)}
+                    onRemove={removeHandler.bind(null, product.id)}
                 />
             ))}
         </ul>
@@ -33,7 +36,7 @@ const Cart = (props) => {
         <CustomModal onClose={props.onClose}>
             {cartItems}
             <div className={classes.summary}>
-                <p>Total amount: 232$</p>
+                <p>Total amount: {cartContext.total}€</p>
             </div>
             <div className={classes.actions}>
                 <DefaultButton onClick={props.onClose} className={classes['close-button']}>Close</DefaultButton>

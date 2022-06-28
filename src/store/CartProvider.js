@@ -11,11 +11,22 @@ const defaultCartState = {
 //concat - returns new array unlike the push() method
 const cartReducer = (state, action) => {
     if (action.type === 'ADD') {
-        console.log(action);
-        console.log(state);
-        const updatedProducts = state.products.concat(action.product);
         const updatedTotal = state.total + action.product.price * action.product.amount;
-        console.log(updatedTotal)
+        const existingProductIdx = state.products.findIndex(product => product.id === action.product.id);
+        const existingProduct = state.products[existingProductIdx];
+        let updatedProducts;
+
+        if (existingProduct) {
+            const updatedProduct = {
+                ...existingProduct,
+                amount: existingProduct.amount + action.product.amount
+            };
+            updatedProducts = [...state.products];
+            updatedProducts[existingProductIdx] = updatedProduct;
+        } else {
+            updatedProducts = state.products.concat(action.product);
+        }
+
         return {
             products: updatedProducts,
             total: updatedTotal

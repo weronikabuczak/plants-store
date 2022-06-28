@@ -1,14 +1,15 @@
 .modal {
     position: fixed;
-    top: 20vh;
+    top: 5vh;
     width: 40%;
     left: 30%;
     background-color: white;
     padding: 2rem;
     border-radius: 30px;
-    box-shadow: 3px 3px 4px 1px #d5d3d3;
     text-align: center;
     z-index: 3;
+    max-height: 50rem;
+    overflow: scroll;
     animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
