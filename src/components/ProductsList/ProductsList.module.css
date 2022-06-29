@@ -11,3 +11,24 @@
     font-size: 2rem;
     padding-left: 3rem;
 }
+
+.loading {
+    margin: 1rem auto;
+    text-align: center;
+    background-color: #f8f6f6;
+    width: 30%;
+    padding: 0.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.error {
+    margin: 1rem auto;
+    text-align: center;
+    background-color: #efbebe;
+    color: #8a0000;
+    width: 30%;
+    padding: 0.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+}

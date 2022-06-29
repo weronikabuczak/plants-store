@@ -5,10 +5,17 @@ import {useEffect, useState} from "react";
 
 const ProductsList = () => {
     const [products, setProducts] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState();
 
     useEffect(() => {
         const fetchContent = async () => {
+            setIsLoading(true);
             const response = await fetch('https://plants-store-4a162-default-rtdb.firebaseio.com/plants.json');
+
+            if (!response.ok) {
+                throw new Error('Cannot load content.');
+            }
             const responseData = await response.json();
             const loadedContent = [];
 
@@ -21,9 +28,30 @@ const ProductsList = () => {
                 })
             }
             setProducts(loadedContent);
+            setIsLoading(false);
         }
-        fetchContent();
+        fetchContent().catch(error => {
+            setIsLoading(false);
+            setError(error.message);
+        })
+
     }, []);
+
+    if (isLoading) {
+        return (
+            <section className={classes.loading}>
+                <p>Loading content...</p>
+            </section>
+        )
+    }
+
+    if (error) {
+        return (
+            <section className={classes.error}>
+                <p>{error}</p>
+            </section>
+        )
+    }
 
     return (
         <section className={classes.products}>
