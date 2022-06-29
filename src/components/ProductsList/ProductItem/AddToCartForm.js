@@ -22,11 +22,6 @@ const AddToCartForm = (props) => {
 
     return (
         <form className={classes.form} onSubmit={submitHandler}>
-            <DefaultButton
-                className={classes['amount-button']}
-                type='submit'>
-                Add to cart</DefaultButton>
-            {!amountIsValid && <p>Entered amount is not valid.</p>}
             <DefaultInput
                 ref={amountRef}
                 label='Choose amount'
@@ -38,6 +33,12 @@ const AddToCartForm = (props) => {
                     max: '99',
                     defaultValue: '1',
                 }}/>
+            <DefaultButton
+                className={classes['amount-button']}
+                type='submit'>
+                Add to cart</DefaultButton>
+            {!amountIsValid && <p>Entered amount is not valid.</p>}
+
         </form>
     )
 };

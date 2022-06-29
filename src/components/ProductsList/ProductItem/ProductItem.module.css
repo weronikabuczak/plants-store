@@ -24,4 +24,8 @@
     color: #02547a;
 }
 
+.product-card:hover {
+    background-color: #eee;
+}
+
 

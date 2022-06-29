@@ -14,6 +14,7 @@ const Header = () => {
                         voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
                         non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <img src={mainImage} alt='Many plants'/>
+                {/*    todo carousel ?*/}
                 </header>
             <WaveContainer/>
         </React.Fragment>

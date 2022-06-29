@@ -19,7 +19,7 @@ const ProductItem = ({plant}) => {
     };
 
     return (
-        <CustomCard>
+        <CustomCard className={classes['product-card']}>
             <li className={classes.item}>
                 <header>
                     <h2>{plant.name}</h2>

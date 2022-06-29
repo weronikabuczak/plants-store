@@ -35,7 +35,7 @@ const Cart = (props) => {
 
 
     return (
-        <CustomModal onClose={props.onClose}>
+        <CustomModal onClose={props.onClose} className={classes.cart}>
             {cartItems}
             <div className={classes.summary}>
                 <p>Total amount: {cartContext.total}€</p>
