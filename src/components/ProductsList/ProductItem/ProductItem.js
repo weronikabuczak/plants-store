@@ -4,6 +4,7 @@ import defaultPlant from "../../../assets/plant1.png"
 import AddToCartForm from "./AddToCartForm";
 import {useContext} from "react";
 import CartContext from "../../../store/cart-context";
+import DefaultButton from "../../UI/DefaultButton";
 
 const ProductItem = ({plant}) => {
     const cartContext = useContext(CartContext);
@@ -27,7 +28,8 @@ const ProductItem = ({plant}) => {
                 </header>
                 <p className={classes.desc}>{plant.desc}</p>
                 <img className={classes.image} src={defaultPlant}/>
-                <AddToCartForm id={plant.id} onAddToCart={addToCartHandler}/>
+                    <AddToCartForm id={plant.id} onAddToCart={addToCartHandler}/>
+                    {/*<DefaultButton className={classes['details-button']}>See details</DefaultButton>*/}
             </li>
         </CustomCard>
     )
