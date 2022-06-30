@@ -39,6 +39,17 @@ const Cart = (props) => {
         </ul>
     )
 
+    const sendOrderHandler = (data) => {
+        console.log(data)
+        fetch('https://plants-store-4a162-default-rtdb.firebaseio.com/orders.json', {
+            method: 'POST',
+            body: JSON.stringify({
+                userData: data,
+                products: cartContext.products
+            })
+        });
+    }
+
     const closeCheckoutHandler = () => {
         setIsCheckout(false);
     }
@@ -53,7 +64,7 @@ const Cart = (props) => {
                     </div>)
                 : <p>No products in cart.</p>
             }
-            {isCheckout && <UserDataForm onCancel={closeCheckoutHandler}/>}
+            {isCheckout && <UserDataForm onConfirm={sendOrderHandler} onCancel={closeCheckoutHandler}/>}
             <div className={classes.actions}>
                 {!isCheckout &&
                     <DefaultButton onClick={props.onClose} cancellation>Close</DefaultButton>
