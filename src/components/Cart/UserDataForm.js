@@ -1,33 +1,43 @@
 import DefaultButton from "../UI/DefaultButton";
+import classes from './UserDataForm.module.css';
+import DefaultInput from "../UI/DefaultInput";
 
-const UserDataForm = () => {
+const UserDataForm = (props) => {
+    const sendDataHandler = (e) => {
+        e.preventDefault();
+    };
+
     return (
-        <form>
-            <div>
+        <form onSubmit={sendDataHandler} className={classes.form}>
+            <h4>Please enter order details below:</h4>
+            <div className={classes.input}>
                 <label htmlFor='name'>Name</label>
-                <input type='text' id='name'/>
+                <DefaultInput type='text' id='name'/>
             </div>
-            <div>
+            <div className={classes.input}>
                 <label htmlFor='surname'>Surname</label>
-                <input type='text' id='surname'/>
+                <DefaultInput type='text' id='surname'/>
             </div>
-            <div>
+            <div className={classes.input}>
                 <label htmlFor='street'>Street</label>
-                <input type='text' id='street'/>
+                <DefaultInput type='text' id='street'/>
             </div>
-            <div>
+            <div className={classes.input}>
                 <label htmlFor='number'>Number</label>
-                <input type='number' id='number'/>
+                <DefaultInput type='number' id='number'/>
             </div>
-            <div>
+            <div className={classes.input}>
                 <label htmlFor='postal'>Postal Code</label>
-                <input type='text' id='postal'/>
+                <DefaultInput type='text' id='postal'/>
             </div>
-            <div>
+            <div className={classes.input}>
                 <label htmlFor='city'>City</label>
-                <input type='text' id='city'/>
+                <DefaultInput type='text' id='city'/>
             </div>
-            <DefaultButton>Confirm</DefaultButton>
+            <div className={classes['form-buttons']}>
+                <DefaultButton type='button' onClick={props.onCancel}>Cancel</DefaultButton>
+                <DefaultButton>Confirm</DefaultButton>
+            </div>
         </form>
     )
 };

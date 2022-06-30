@@ -1,0 +1,24 @@
+.form {
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+}
+
+.input label {
+  padding: 0;
+  display: block;
+  margin-top: 5px;
+}
+
+.input input {
+  border: 1px solid #a4a4a4;
+  margin-bottom: 0.2rem;
+}
+
+.form-buttons {
+  margin-top: 1rem;
+}
+
+.form-buttons button {
+  margin-right: 1rem;
+}
+
