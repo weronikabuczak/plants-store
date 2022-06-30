@@ -1,11 +1,13 @@
 import CustomModal from "../UI/CustomModal";
 import classes from './Cart.module.css';
 import DefaultButton from "../UI/DefaultButton";
-import {useContext} from "react";
+import {useContext, useState} from "react";
 import CartContext from "../../store/cart-context";
 import CartItem from "./CartItem";
+import UserDataForm from "./UserDataForm";
 
 const Cart = (props) => {
+    const [isCheckout, setIsCheckout] = useState(false);
     const cartContext = useContext(CartContext);
 
     const removeHandler = (id) => {
@@ -18,6 +20,10 @@ const Cart = (props) => {
     };
 
     const cartHasProducts = cartContext.products.length > 0;
+
+    const orderHandler = () => {
+        setIsCheckout(true);
+    }
 
 
     const cartItems = (
@@ -33,16 +39,24 @@ const Cart = (props) => {
         </ul>
     )
 
-
     return (
         <CustomModal onClose={props.onClose} className={classes.cart}>
             {cartItems}
-            <div className={classes.summary}>
-                <p>Total amount: {cartContext.total}€</p>
-            </div>
+            {cartHasProducts
+                ? (
+                    <div className={classes.summary}>
+                        <p>Total amount: {cartContext.total}€</p>
+                    </div>)
+                : <p>No products in cart.</p>
+            }
+            {isCheckout && <UserDataForm/>}
             <div className={classes.actions}>
-                <DefaultButton onClick={props.onClose} className={classes['close-button']}>Close</DefaultButton>
-                {cartHasProducts && <DefaultButton className={classes['order-button']}>Order</DefaultButton>}
+                {!isCheckout &&
+                    <DefaultButton onClick={props.onClose} className={classes['close-button']}>Close</DefaultButton>
+                }
+                {cartHasProducts && !isCheckout &&
+                    <DefaultButton className={classes['order-button']} onClick={orderHandler}>Order</DefaultButton>
+                }
             </div>
         </CustomModal>
     )
