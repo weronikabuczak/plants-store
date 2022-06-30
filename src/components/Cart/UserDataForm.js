@@ -35,8 +35,8 @@ const UserDataForm = (props) => {
                 <DefaultInput type='text' id='city'/>
             </div>
             <div className={classes['form-buttons']}>
-                <DefaultButton type='button' onClick={props.onCancel}>Cancel</DefaultButton>
-                <DefaultButton>Confirm</DefaultButton>
+                <DefaultButton type='button' onClick={props.onCancel} cancellation>Cancel</DefaultButton>
+                <DefaultButton confirmation>Confirm</DefaultButton>
             </div>
         </form>
     )

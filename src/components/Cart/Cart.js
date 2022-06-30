@@ -56,10 +56,10 @@ const Cart = (props) => {
             {isCheckout && <UserDataForm onCancel={closeCheckoutHandler}/>}
             <div className={classes.actions}>
                 {!isCheckout &&
-                    <DefaultButton onClick={props.onClose} className={classes['close-button']}>Close</DefaultButton>
+                    <DefaultButton onClick={props.onClose} cancellation>Close</DefaultButton>
                 }
                 {cartHasProducts && !isCheckout &&
-                    <DefaultButton className={classes['order-button']} onClick={orderHandler}>Order</DefaultButton>
+                    <DefaultButton confirmation onClick={orderHandler}>Order</DefaultButton>
                 }
             </div>
         </CustomModal>

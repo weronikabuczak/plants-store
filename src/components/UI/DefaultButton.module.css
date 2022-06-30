@@ -20,3 +20,11 @@
     background-color: #7a7979;
     cursor: not-allowed;
 }
+
+.default-button.confirmation {
+    background-color: lightgreen;
+}
+
+.default-button.cancellation {
+    background-color: darksalmon;
+}
