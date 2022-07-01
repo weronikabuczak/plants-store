@@ -28,8 +28,11 @@
 }
 
 .img {
-    height: 10rem;
+    height: 8rem;
     grid-column: 2;
     grid-row: 1/5;
     align-self: center;
+    justify-self: center;
+    max-width: 150px;
+    object-fit: cover;
 }

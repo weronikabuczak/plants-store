@@ -17,6 +17,7 @@ const ProductsList = () => {
                 throw new Error('Cannot load content.');
             }
             const responseData = await response.json();
+            console.log(responseData)
             const loadedContent = [];
 
             for (const key in responseData) {
@@ -24,7 +25,8 @@ const ProductsList = () => {
                     id: key,
                     name: responseData[key].name,
                     desc: responseData[key].desc,
-                    price: responseData[key].price
+                    price: responseData[key].price,
+                    img: responseData[key].img
                 })
             }
             setProducts(loadedContent);

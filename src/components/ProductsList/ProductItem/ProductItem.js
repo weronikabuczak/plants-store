@@ -15,7 +15,8 @@ const ProductItem = ({plant}) => {
             name: plant.name,
             desc: plant.desc,
             amount: amount,
-            price: plant.price
+            price: plant.price,
+            img: plant.img
         })
     };
 
@@ -23,13 +24,13 @@ const ProductItem = ({plant}) => {
         <CustomCard className={classes['product-card']}>
             <li className={classes.item}>
                 <header>
-                    <h2>{plant.name}</h2>
+                    <h1>{plant.name}</h1>
                     <p className={classes.price}>{plant.price}€</p>
                 </header>
                 <p className={classes.desc}>{plant.desc}</p>
-                <img className={classes.image} src={defaultPlant}/>
-                    <AddToCartForm id={plant.id} onAddToCart={addToCartHandler}/>
-                    {/*<DefaultButton className={classes['details-button']}>See details</DefaultButton>*/}
+                <img className={classes.image} src={plant.img}/>
+                <AddToCartForm id={plant.id} onAddToCart={addToCartHandler}/>
+                {/*<DefaultButton className={classes['details-button']}>See details</DefaultButton>*/}
             </li>
         </CustomCard>
     )
