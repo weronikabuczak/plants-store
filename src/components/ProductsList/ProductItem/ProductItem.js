@@ -1,13 +1,12 @@
 import classes from './ProductItem.module.css';
 import CustomCard from "../../UI/CustomCard";
-import defaultPlant from "../../../assets/plant1.png"
 import AddToCartForm from "./AddToCartForm";
-import {useContext} from "react";
+import {useContext, useState} from "react";
 import CartContext from "../../../store/cart-context";
-import DefaultButton from "../../UI/DefaultButton";
 
 const ProductItem = ({plant}) => {
     const cartContext = useContext(CartContext);
+    const [addSuccess, setAddSuccess] = useState(false);
 
     const addToCartHandler = amount => {
         cartContext.addProduct({
@@ -18,10 +17,12 @@ const ProductItem = ({plant}) => {
             price: plant.price,
             img: plant.img
         })
+        setAddSuccess(true);
     };
 
     return (
         <CustomCard className={classes['product-card']}>
+            {addSuccess && <p className={classes.success}>Plant has been added successfully!</p>}
             <li className={classes.item}>
                 <header>
                     <h1>{plant.name}</h1>
@@ -30,7 +31,7 @@ const ProductItem = ({plant}) => {
                 <p className={classes.desc}>{plant.desc}</p>
                 <img className={classes.image} src={plant.img}/>
                 <AddToCartForm id={plant.id} onAddToCart={addToCartHandler}/>
-                {/*<DefaultButton className={classes['details-button']}>See details</DefaultButton>*/}
+
             </li>
         </CustomCard>
     )
