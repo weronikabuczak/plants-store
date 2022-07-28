@@ -1,13 +1,15 @@
 import CustomModal from "../UI/CustomModal";
 import classes from './Cart.module.css';
 import DefaultButton from "../UI/DefaultButton";
-import {useContext, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import CartContext from "../../store/cart-context";
 import CartItem from "./CartItem";
 import UserDataForm from "./UserDataForm";
 
 const Cart = (props) => {
     const [isCheckout, setIsCheckout] = useState(false);
+    const [orderSuccess, setOrderSuccess] = useState(false);
+    const [error, setError] = useState(null);
     const cartContext = useContext(CartContext);
 
     const removeHandler = (id) => {
@@ -25,8 +27,7 @@ const Cart = (props) => {
         setIsCheckout(true);
     }
 
-
-    const cartItems = (
+    let cartItems = (
         <ul className={classes['products-list']}>
             {cartContext.products.map((product) => (
                 <CartItem
@@ -40,14 +41,23 @@ const Cart = (props) => {
     )
 
     const sendOrderHandler = (data) => {
-        console.log(data)
+        setOrderSuccess(false);
+        setError(null);
         fetch('https://plants-store-4a162-default-rtdb.firebaseio.com/orders.json', {
             method: 'POST',
             body: JSON.stringify({
                 userData: data,
                 products: cartContext.products
-            })
-        });
+        })
+        }).then(response => {
+            if(response.ok) {
+                setOrderSuccess(true);
+                setIsCheckout(false);
+                cartContext.products = [];
+            }
+        }).catch(err => {
+            setError(err.message);
+        })
     }
 
     const closeCheckoutHandler = () => {
@@ -72,6 +82,8 @@ const Cart = (props) => {
                 {cartHasProducts && !isCheckout &&
                     <DefaultButton confirmation onClick={orderHandler}>Order</DefaultButton>
                 }
+                {error && <p className={classes.error}>{error}</p>}
+                {orderSuccess && <p className={classes.success}>Order has been sent successfully!</p>}
             </div>
         </CustomModal>
     )

@@ -1,19 +1,17 @@
 .cart-button {
-    border: none;
     width: 11rem;
     padding: 5px 0;
     font-style: inherit;
     font-weight: bold;
     font-size: 1rem;
-    background-color: rgba(54, 183, 160, 0.47);
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
     color: black;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 1px 1px 5px #3a3737;
-    /*position: fixed;*/
-    /*right: 10rem;*/
+    box-shadow: 1px 1px 3px 2px #ccc;
+    border: none;
 }
 
 .cart-button:hover {
@@ -22,21 +20,21 @@
 }
 
 .icon {
-    height: 2.5rem;
+    height: 2.4rem;
 }
 
+
 .quantity {
-    background-color: white;
+    background-color: #a3ff89;
     padding: 0.5rem;
     color: black;
     border-radius: 30px;
-    width: 2rem;
-
+    width: 3rem;
+    font-size: 1.3rem;
 }
 
 .text {
     font-size: 1.4rem;
-    border-right: 1px solid #013118;
     padding: 9px 9px 9px 0;
     font-family: inherit;
 }

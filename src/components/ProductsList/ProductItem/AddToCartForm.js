@@ -25,7 +25,6 @@ const AddToCartForm = (props) => {
             <DefaultInput
                 ref={amountRef}
                 label='Choose amount'
-                className={classes['amount-input']}
                 input={{
                     id: props.id,
                     type: 'number',

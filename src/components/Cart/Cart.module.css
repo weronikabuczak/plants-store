@@ -10,3 +10,21 @@
     font-size: 1.3rem;
     font-weight: bold;
 }
+
+.error {
+    background-color: #f6f6f6;
+    border: 1px solid #ff7171;
+    padding: 1rem;
+    width: 30%;
+    margin: 1rem auto;
+    border-radius: 2rem;
+}
+
+.success {
+    background-color: #ddfff2;
+    border: 1px solid #25dc9e;
+    padding: 1rem;
+    width: 50%;
+    margin: 1rem auto;
+    border-radius: 2rem;
+}

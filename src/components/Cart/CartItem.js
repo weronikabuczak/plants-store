@@ -1,6 +1,5 @@
 import DefaultButton from "../UI/DefaultButton";
 import classes from './CartItem.module.css';
-import plantImage from '../../assets/plant1.png';
 
 const CartItem = (props) => {
     return (
