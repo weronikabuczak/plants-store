@@ -1,7 +1,7 @@
 .header {
     padding: 2rem;
     background-color: white;
-    width: 50%;
+    width: 60%;
     margin: 1.8rem auto;
     border-radius: 3rem;
     box-shadow: 5px 5px 20px 2px rgb(234, 231, 231);
@@ -9,16 +9,25 @@
     animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.header h2 {
+.header h1 {
     text-align: center;
+    font-size: 2.2rem;
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: #2f2e2e;
+    width: 85%;
+    margin: 1.4rem auto;
+    text-align: justify;
 }
 
 .header img {
     height: 30vh;
     z-index: 1;
     width: 100%;
-    object-fit: cover;
-    opacity: 85%;
+    object-fit: cover   ;
+    opacity: 90%;
     border-radius: 20px;
 }
 
