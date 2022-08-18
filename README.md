@@ -9,7 +9,7 @@ Cart:
 
 ![Screenshot](/images/cart.png)
 
-Ordering form:
+Order form:
 
 ![Screenshot](/images/order.png)
 
